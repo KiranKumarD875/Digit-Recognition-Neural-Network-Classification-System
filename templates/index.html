@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Digit Recognition Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Neural Network <span>Digit Recognition</span></h1>
+            <p>Draw a number from 0 to 9 in the box below. A custom-built neural network (built from scratch in NumPy) will instantly predict what you drew.</p>
+        </header>
+
+        <main class="app-layout">
+            <div class="canvas-panel glass-panel">
+                <div class="canvas-header">
+                    <h2>Drawing Canvas</h2>
+                    <button id="clear-btn" class="btn">Clear</button>
+                </div>
+                <div class="canvas-container">
+                    <canvas id="drawing-canvas" width="280" height="280"></canvas>
+                </div>
+            </div>
+
+            <div class="result-panel glass-panel">
+                <h2>Prediction</h2>
+                <div class="prediction-display">
+                    <span id="prediction-result">?</span>
+                </div>
+                <p id="status-text">Draw a digit to see the prediction...</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Built completely from scratch using raw mathematics. 1 Hidden Layer Multi-Layer Perceptron.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
